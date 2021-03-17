@@ -1,0 +1,54 @@
+Overview of the Altman-Sumner Myosin computational model started Summer 2020 
+Last updated on:07/09/2020 (Well the overview at least) 
+Current version 0.1 (07/09/2020)
+
+Written for python 3.8
+Run on Spyder version: 4.0.1 with the A_S_model folder as end of run path. 
+Also in settings change default directory to "working directory"
+
+Overview: 
+This code is produced by David Altman's Biophysics lab at Willamette University 
+
+List of past/present users: 
+	David Altman 
+	Sasha Sumner
+	and You! 
+
+
+Originally started 07/07/2020
+
+Note: Forward contains nothing related to the code and you may skip it without missing anything about functionality. 
+
+Forward: 
+
+
+Table of Contents: 
+	I: units
+	II: How to use 
+	III: Different folders 
+	IV: Tips and tricks 
+
+
+I: Units 
+
+All distances are in units of nanometers 
+
+
+
+
+
+II: How to use 
+	
+
+
+
+
+III: Different folders and their purpose 
+
+	i) A_S_model: that main folder that contains the rest of the program 
+
+       ii) Generators; the folder that contains all code that is used to generate files that are use in other parts of the code. Mainly that is where you will find the code that takes in an image and produces the map that the software will then use to for the basis of the simulation. 
+	
+      iii) Model: The Main body of the code where you will find the main code itself as well as the files for the defined functions that are used in the main body of the code. 
+
+       iv) Reference: The folder that contains the images that are fed in to produce the maps as well as the maps themselves. Any further extension 

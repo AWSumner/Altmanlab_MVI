@@ -1,0 +1,6 @@
+This folder exist as a folder for any temporary files I will have the program create to store values to make computation easier. 
+
+
+
+
+
