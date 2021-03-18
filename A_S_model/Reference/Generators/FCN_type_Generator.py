@@ -16,7 +16,7 @@ z=symbols('z')#symbol used in the functions
 'inputs'
 x_dim=3 #number of entries per row
 y_dim=3 #number of rows
-Func=[sin(z),cos(z)] # the function(s) you are mapping 
+Func=[sin(z),cos(z)] # the function(s) you are mapping Note: if you are using a non cont. and/or non diff.able function this code can produce errors (also what is wrong with you?! )
 Map_name='SL_test_1' #name of map file you want
 Directionality=True #check that determines if you want a 'backwards direction' to be possible ((theta can be (pi/2->pi->-pi/2))) from arctan codomain
 
@@ -46,7 +46,7 @@ for Fcn in Func: #does the mapping for each function
         x=0 # x position indexing reset
         for item in row: # looks at each item in that row
         
-            if (y-1<=Fcn.subs(z,x)<=y+1) or (Fcn.subs(z,(x-1))<=y<=Fcn.subs(z,(x+1))): # check to see if the function (+-1( )bound the y value or the y(+-1) values bound the function values 
+            if (y-1<=Fcn.subs(z,x)<=y+1) or (Fcn.subs(z,(x-1))<=y<=Fcn.subs(z,(x+1)) or (Fcn.subs(z,(x+1))<=y<=Fcn.subs(z,(x-1)))): # check to see if the function (+-1) bound the y value or the y(+-1) values bound the function values 
                 deriv=diff(Fcn,z,1) #Takes derivative with respect to z once
                 slp=deriv.subs(z,x) # evaluates the slope of the function by subing in the x value
                 theta=np.arctan(slp)
