@@ -30,9 +30,9 @@ def Line(x,y):  # a function of creating a line
     
     if y==50:  # line you wish to populate 
         slope=2*np.pi#slope of the line you are entering 
-        return(True,slope) #says in network and returns the slope of the graph
+        return([True,slope]) #says in network and returns the slope of the graph
     else: 
-        return(False,'placeholder') #not in network and a placeholder to make it a list
+        return([False]) #not in network
     
 'Grid'
 
@@ -44,18 +44,18 @@ def Grid(x,y): #function for creating a grid
     
           if y % Grid_y==0: #checks to see if the y position is divisable by the grid seperation
               val=random.choice([np.pi/2,np.pi]) #randomly chooses the angle at the intesection
-              return(True,val) #tells the code it is in network and that the angle is the random choice above
+              return([True,val]) #tells the code it is in network and that the angle is the random choice above
           
           else: 
-              return(True,np.pi) #tells the code it is in newtork and the the angle is pi
+              return([True,np.pi]) #tells the code it is in newtork and the the angle is pi
         
     else:
         
         if y % Grid_y==0: #checks to see if the y position is divisable by the grid seperation
-              return(True,np.pi/2) #tells the code it is in network and that the angle is pi/2
+              return([True,np.pi/2]) #tells the code it is in network and that the angle is pi/2
           
         else: 
-            return(False,np.pi) #tells the code it isn't in newtork and a place holder to make it a list
+            return([False]) #tells the code it isn't in newtork
      
 
 'Sine'
