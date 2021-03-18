@@ -34,10 +34,12 @@ Matrix=np.zeros((y_dim,x_dim))
 
 R=0 #reset the R counter **left over for the reverse list method at the bottom
 for Fcn in Func: #does the mapping for each function
+
     if Directionality: #checks if you want directionality for a given function
         reverse=random.choice([True,False]) #if you want it to randomly choose for each function
        #reverse=True  #if you want to fix it True
        #reverse=False #if you want to fix it False
+       
     y=0 # y position index reset
     for row in Matrix: # seperates out each row
     
@@ -46,14 +48,14 @@ for Fcn in Func: #does the mapping for each function
         
             if (y-1<=Fcn.subs(z,x)<=y+1) or (Fcn.subs(z,(x-1))<=y<=Fcn.subs(z,(x+1))): # check to see if the function (+-1( )bound the y value or the y(+-1) values bound the function values 
                 deriv=diff(Fcn,z,1) #Takes derivative with respect to z once
-                slp=deriv.subs(z,x) # evaluates the slope of the function
+                slp=deriv.subs(z,x) # evaluates the slope of the function by subing in the x value
                 theta=np.arctan(slp)
                 
                 if theta <=0: #converts the angle to match the reqirements for the model
                     theta+=2*np.pi #adds two pi
                 
                 if reverse: 
-                    theta+=(-np.pi)
+                    theta+=(-np.pi) # takes the calculated theta and converts it to its reverse
                 
                 if item==0: #checks to see if the entry is empty
                     Matrix[y,x]=theta #if empty it fills the position with
